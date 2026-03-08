@@ -55,7 +55,7 @@
 
 @layer components {
   .glass-card {
-    @apply bg-white/85 backdrop-blur-2xl border border-white/60 shadow-2xl;
+    @apply bg-white/80 backdrop-blur-2xl border border-white/60 shadow-2xl;
     box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.08), 0 4px 12px -5px rgba(0, 0, 0, 0.03);
   }
 
@@ -63,7 +63,7 @@
     @apply glass-card transition-all duration-300 ease-out;
   }
   .glass-card-hover:hover {
-    @apply -translate-y-2 bg-white/95 border-primary/30 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.15)];
+    @apply -translate-y-2 bg-white/90 border-primary/30 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.15)];
   }
 
   .glow-text-cyan {
@@ -84,7 +84,7 @@
   }
 
   .glass-navbar {
-    @apply bg-white/98 backdrop-blur-2xl border-b border-primary/20 sticky top-0 z-50 shadow-md;
+    @apply bg-white/95 backdrop-blur-2xl border-b border-primary/20 sticky top-0 z-50 shadow-md;
     background-image: linear-gradient(to bottom, white, hsla(210, 40%, 96%, 0.9));
   }
 }
