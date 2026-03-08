@@ -71,7 +71,7 @@ const AeroVisual = () => (
 );
 
 const HeroSection = () => (
-  <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
+  <section className="relative py-12 md:py-20 overflow-hidden">
     {/* Background Radar & Glow */}
     <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
       <div className="relative w-[800px] h-[800px] opacity-[0.05]">
@@ -134,7 +134,9 @@ const HeroSection = () => (
         </div>
       </div>
 
-      <KPICards />
+      <div className="mt-20 md:mt-24">
+        <KPICards />
+      </div>
     </div>
   </section>
 );

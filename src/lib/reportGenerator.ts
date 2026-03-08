@@ -42,19 +42,19 @@ export const generateCargoReport = () => {
     doc.text('Strategic Insights (FY2024)', 14, 90);
     
     autoTable(doc, {
-      startY: 95,
-      head: [['Airport Hub', 'IATA', 'Volume (MT)', 'YoY Growth', 'Dominant Category']],
-      body: [
-        ['Indira Gandhi International', 'DEL', '920,000', '+19.2%', 'Electronics & Tech'],
-        ['Chhatrapati Shivaji Maharaj', 'BOM', '850,000', '+11.5%', 'Pharmaceuticals'],
-        ['Kempegowda International', 'BLR', '410,000', '+16.8%', 'Perishables & Agri'],
-        ['Rajiv Gandhi International', 'HYD', '380,000', '+14.1%', 'Pharmaceuticals'],
-        ['Chennai International', 'MAA', '350,000', '+12.4%', 'Automotive Parts'],
-      ],
-      styles: { font: 'helvetica', fontSize: 10, cellPadding: 5 },
-      headStyles: { fillColor: [37, 99, 235], textColor: 255, fontStyle: 'bold' },
-      alternateRowStyles: { fillColor: [245, 247, 250] },
-    });
+    startY: 95,
+    head: [['Airport Hub', 'IATA', 'Total Vol (MT)', 'Imports', 'Exports', 'YoY Growth']],
+    body: [
+      ['Indira Gandhi International', 'DEL', '920,000', '520,000', '400,000', '+19.2%'],
+      ['Chhatrapati Shivaji Maharaj', 'BOM', '850,000', '410,000', '440,000', '+11.5%'],
+      ['Kempegowda International', 'BLR', '410,000', '190,000', '220,000', '+16.8%'],
+      ['Rajiv Gandhi International', 'HYD', '380,000', '170,000', '210,000', '+14.1%'],
+      ['Chennai International', 'MAA', '350,000', '180,000', '170,000', '+12.4%'],
+    ],
+    styles: { font: 'helvetica', fontSize: 9, cellPadding: 4 },
+    headStyles: { fillColor: [37, 99, 235], textColor: 255, fontStyle: 'bold' },
+    alternateRowStyles: { fillColor: [245, 247, 250] },
+  });
 
     // Commodity Breakdown
     const finalY = (doc as any).lastAutoTable?.cursor?.y || 160;
@@ -85,7 +85,7 @@ export const generateCargoReport = () => {
     });
 
     // Footer Branding
-    const pageCount = doc.internal.getNumberOfPages();
+    const pageCount = (doc as any).internal.getNumberOfPages();
     for (let i = 1; i <= pageCount; i++) {
       doc.setPage(i);
       doc.setFontSize(9);

@@ -1,9 +1,10 @@
-import { Plane, BarChart3, Brain, Database, FileText, User, Settings, LogOut, Download } from "lucide-react";
+import { BarChart3, Brain, Database, FileText, User, Settings, LogOut, Download } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { toast } from "sonner";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { generateCargoReport } from "@/lib/reportGenerator";
+import { AeroWingMaster } from "@/components/AeroLogo";
 
 const navLinks = [
   { label: "Dashboard", icon: BarChart3, path: "/" },
@@ -45,12 +46,12 @@ const Navbar = () => {
     <motion.nav
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className="fixed top-0 left-0 right-0 z-50 glass-navbar px-6 py-3"
+      className="relative z-50 glass-navbar px-6 py-3 border-b border-white/5 shadow-lg"
     >
       <div className="max-w-[1440px] mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3 group">
           <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-indigo-600 flex items-center justify-center shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
-            <Plane className="text-white w-6 h-6" />
+            <AeroWingMaster className="text-white w-7 h-7" />
           </div>
           <span className="font-display text-2xl font-bold tracking-tight text-gradient">
             AeroIQ

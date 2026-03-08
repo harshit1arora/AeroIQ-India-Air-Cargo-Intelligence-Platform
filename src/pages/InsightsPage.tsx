@@ -7,12 +7,12 @@ import {
 } from 'recharts';
 
 const data = [
-  { name: 'Jan', volume: 400, growth: 12 },
-  { name: 'Feb', volume: 300, growth: 15 },
-  { name: 'Mar', volume: 600, growth: 18 },
-  { name: 'Apr', volume: 800, growth: 22 },
-  { name: 'May', volume: 500, growth: 20 },
-  { name: 'Jun', volume: 900, growth: 25 },
+  { name: 'Jan', imports: 220, exports: 180, growth: 12 },
+  { name: 'Feb', imports: 140, exports: 160, growth: 15 },
+  { name: 'Mar', imports: 320, exports: 280, growth: 18 },
+  { name: 'Apr', imports: 450, exports: 350, growth: 22 },
+  { name: 'May', imports: 240, exports: 260, growth: 20 },
+  { name: 'Jun', imports: 480, exports: 420, growth: 25 },
 ];
 
 const InsightsPage = () => {
@@ -53,16 +53,20 @@ const InsightsPage = () => {
             
             <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
               <TrendingUp className="w-5 h-5 text-primary" />
-              Volume Forecast (Q3 2024)
+              Volume Breakdown (Q3 2024)
             </h3>
             
             <div className="h-[300px] w-full">
               <ResponsiveContainer width="100%" height="100%">
                 <AreaChart data={data}>
                   <defs>
-                    <linearGradient id="colorVolume" x1="0" y1="0" x2="0" y2="1">
+                    <linearGradient id="colorImports" x1="0" y1="0" x2="0" y2="1">
                       <stop offset="5%" stopColor="hsl(var(--primary))" stopOpacity={0.3}/>
                       <stop offset="95%" stopColor="hsl(var(--primary))" stopOpacity={0}/>
+                    </linearGradient>
+                    <linearGradient id="colorExports" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="5%" stopColor="#10B981" stopOpacity={0.3}/>
+                      <stop offset="95%" stopColor="#10B981" stopOpacity={0}/>
                     </linearGradient>
                   </defs>
                   <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="hsl(var(--border))" />
@@ -76,9 +80,18 @@ const InsightsPage = () => {
                       backdropFilter: 'blur(8px)'
                     }} 
                   />
-                  <Area type="monotone" dataKey="volume" stroke="hsl(var(--primary))" fillOpacity={1} fill="url(#colorVolume)" strokeWidth={3} />
+                  <Area type="monotone" dataKey="imports" stackId="1" stroke="hsl(var(--primary))" fillOpacity={1} fill="url(#colorImports)" strokeWidth={3} />
+                  <Area type="monotone" dataKey="exports" stackId="1" stroke="#10B981" fillOpacity={1} fill="url(#colorExports)" strokeWidth={3} />
                 </AreaChart>
               </ResponsiveContainer>
+            </div>
+            <div className="flex items-center gap-6 mt-4">
+              <div className="flex items-center gap-2 text-xs text-muted-foreground font-medium">
+                <div className="w-3 h-3 rounded bg-primary" /> Imports
+              </div>
+              <div className="flex items-center gap-2 text-xs text-muted-foreground font-medium">
+                <div className="w-3 h-3 rounded bg-[#10B981]" /> Exports
+              </div>
             </div>
           </motion.div>
 
@@ -94,7 +107,7 @@ const InsightsPage = () => {
             </h3>
             
             <div className="space-y-6 flex-1">
-              <div className="p-4 rounded-xl bg-white border border-border/50 shadow-sm">
+              <div className="p-4 rounded-xl bg-white/90 border border-border/60 shadow-md">
                 <p className="text-sm font-bold mb-2 flex items-center justify-between">
                   Route Optimization 
                   <span className="text-[10px] bg-green-500/10 text-green-500 px-2 py-0.5 rounded-full">Recommended</span>
@@ -104,7 +117,7 @@ const InsightsPage = () => {
                 </p>
               </div>
               
-              <div className="p-4 rounded-xl bg-white border border-border/50 shadow-sm">
+              <div className="p-4 rounded-xl bg-white/90 border border-border/60 shadow-md">
                 <p className="text-sm font-bold mb-2 flex items-center justify-between">
                   Capacity Management
                   <span className="text-[10px] bg-amber-500/10 text-amber-500 px-2 py-0.5 rounded-full">Critical</span>
@@ -134,7 +147,7 @@ const InsightsPage = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * i }}
-              className="glass-card p-6 border-white/40"
+              className="glass-card p-6 border-white shadow-xl hover:shadow-2xl transition-all"
             >
               <div className={`w-10 h-10 rounded-lg bg-muted/50 flex items-center justify-center mb-4 ${item.color}`}>
                 <item.icon className="w-5 h-5" />
