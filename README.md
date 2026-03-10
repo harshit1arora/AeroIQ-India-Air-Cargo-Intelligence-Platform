@@ -2,7 +2,7 @@
 
 **AeroIQ** is an enterprise intelligence platform for analyzing India's air cargo operations. It provides unified data visualization, AI-driven insights, predictive forecasting, and strategic advisory capabilities for logistics and supply chain professionals.
 
-**Status**: Deloitte Hacksplosion Finalist  
+**Status**: Deloitte Hacksplosion
 **Built with**: Vite, React 18, TypeScript, Tailwind CSS
 
 ---
