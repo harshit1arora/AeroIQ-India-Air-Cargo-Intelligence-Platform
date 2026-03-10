@@ -51,13 +51,14 @@ const Navbar = () => {
       <div className="max-w-[1440px] mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3 group">
           <div 
-            className="w-10 h-10 flex items-center justify-center border transition-colors group-hover:border-primary"
+            className="w-10 h-10 flex items-center justify-center border transition-colors group-hover:bg-primary/10"
             style={{
-              backgroundColor: '#86BC25',
-              borderColor: '#86BC25'
+              backgroundColor: '#FFFFFF',
+              borderColor: '#86BC25',
+              border: '2px solid #86BC25'
             }}
           >
-            <AeroWingMaster className="text-black w-7 h-7" />
+            <AeroWingMaster className="w-7 h-7" style={{ color: '#86BC25' }} />
           </div>
           <span className="font-display text-2xl font-bold tracking-tight text-gradient">
             AeroIQ
@@ -109,15 +110,15 @@ const Navbar = () => {
           <div className="relative">
             <button 
               onClick={() => setShowProfileMenu(!showProfileMenu)}
-              className="w-10 h-10 rounded-xl flex items-center justify-center border transition-all group overflow-hidden"
+              className="w-10 h-10 rounded-xl flex items-center justify-center border transition-all group overflow-hidden hover:bg-primary/20"
               style={{
-                backgroundColor: 'hsla(88, 67%, 50%, 0.1)',
-                borderColor: 'hsla(88, 67%, 50%, 0.3)'
+                backgroundColor: 'hsla(88, 67%, 50%, 0.15)',
+                borderColor: 'hsla(88, 67%, 50%, 0.4)'
               }}
             >
-              <User className="w-5 h-5 text-muted-foreground group-hover:transition-colors" style={{ color: 'hsl(var(--deloitte-dark-gray))' }} 
+              <User className="w-5 h-5 text-white group-hover:transition-colors" style={{ color: '#FFFFFF' }} 
                 onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(var(--deloitte-primary-green))'}
-                onMouseLeave={(e) => e.currentTarget.style.color = 'hsl(var(--deloitte-dark-gray))'} 
+                onMouseLeave={(e) => e.currentTarget.style.color = '#FFFFFF'} 
               />
             </button>
 
