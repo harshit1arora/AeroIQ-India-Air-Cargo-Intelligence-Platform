@@ -1,93 +1,193 @@
-# ✈️ AeroIQ — India Air Cargo Intelligence Platform
+# AeroIQ — India Air Cargo Intelligence Platform
 
-[![Deloitte Hacksplosion Finalist](https://img.shields.io/badge/Deloitte-Hacksplosion-blue?style=for-the-badge&logo=deloitte)](https://github.com/harshit1arora/AeroIQ-India-Air-Cargo-Intelligence-Platform)
-[![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+**AeroIQ** is an enterprise intelligence platform for analyzing India's air cargo operations. It provides unified data visualization, AI-driven insights, predictive forecasting, and strategic advisory capabilities for logistics and supply chain professionals.
 
-**AeroIQ** is a high-fidelity intelligence platform designed to unify and analyze India's air cargo data. Developed for the **Deloitte Hacksplosion**, it leverages Generative AI and advanced data visualization to provide logistics stakeholders with actionable insights, predictive forecasting, and strategic advisory.
+**Status**: Deloitte Hacksplosion Finalist  
+**Built with**: Vite, React 18, TypeScript, Tailwind CSS
 
 ---
 
-## 🌟 Key Features
+## Overview
 
-### 🤖 AeroIQ Intelligence Assistant
-A custom-trained AI chatbot ("The Spark") capable of:
-- **Natural Language Querying**: Extract insights from DGCA and AAI datasets using plain English.
-- **Strategic Advisory**: Real-time recommendations for route optimization and capacity management.
-- **Logistics Knowledge Base**: Instant access to regulatory information and market trends.
-
-### 📊 AI-Driven Market Insights
-- **Predictive Forecasting**: Advanced time-series analysis for air cargo volumes (Q3 2024 forecasts included).
-- **Route Optimization**: Intelligence-driven suggestions to reduce latency and costs.
-- **Dynamic Heatmaps**: Visual representation of cargo density across major Indian hubs (DEL, BOM, BLR, MAA).
-
-### 🔗 Real-Time Data Sources
-A unified monitoring center for ingestion pipelines:
-- **DGCA & AAI Integration**: Live health checks for official government statistics portals.
-- **Multi-Protocol Support**: Data streaming via REST, WebSocket, and gRPC.
-- **Integrity Verification**: End-to-end encryption for sensitive logistics data.
-
-### 📜 Professional Reporting
-- **PDF Generation**: Synthesize complex market analysis into stakeholder-ready PDF reports with one click.
-- **Audit Logging**: Comprehensive history of generated intelligence assets.
+AeroIQ aggregates air cargo data from India's Directorate General of Civil Aviation (DGCA) and Airports Authority of India (AAI) to provide actionable intelligence for stakeholders in logistics, supply chain management, and aviation.
 
 ---
 
-## 🚀 Tech Stack
+## Core Features
 
-- **Frontend**: React 18, TypeScript, Vite
-- **Styling**: Tailwind CSS, Framer Motion (Animations), Lucide React (Icons)
-- **UI Components**: Shadcn UI, Radix UI
-- **Data Visualization**: Recharts, Custom SVG Mapping
-- **State Management**: React Query (TanStack)
-- **Reporting**: jsPDF / html2canvas (Custom Implementation)
+### Intelligent Data Assistant
 
----
+- Natural language querying of aviation datasets
+- Real-time regulatory information and market trend alerts
+- Strategic recommendations for route optimization and capacity management
 
-## 🛠️ Installation & Setup
+### Market Analytics Dashboard
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/harshit1arora/AeroIQ-India-Air-Cargo-Intelligence-Platform.git
-   cd AeroIQ-India-Air-Cargo-Intelligence-Platform
-   ```
+- Predictive forecasting for air cargo volumes using time-series analysis
+- Dynamic heatmaps showing cargo density across major hubs (Delhi, Mumbai, Bangalore, Chennai)
+- Commodity breakdown analysis and trend visualization
+- Monthly cargo trends with AI-driven forecasting models
 
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
+### Data Source Monitoring
 
-3. **Run the development server**:
-   ```bash
-   npm run dev
-   ```
+- Unified ingestion pipeline health status
+- Integration with DGCA and AAI official portals
+- Real-time data validation and integrity checks
 
-4. **Build for production**:
-   ```bash
-   npm run build
-   ```
+### Professional Reporting
+
+- Automated PDF report generation
+- Export of analysis and forecasts for stakeholder distribution
+- Audit logging and report history tracking
 
 ---
 
-## 🎨 Design Philosophy: "Vibrant Glass"
+## Technology Stack
 
-AeroIQ features a custom **Vibrant Glass** design system:
-- **Glassmorphism**: High-blur backdrops with subtle border glows for a modern, futuristic feel.
-- **Cinematic Atmosphere**: Animated sky gradients and motion-blur overlays inspired by high-speed aviation.
-- **Data-First Typography**: Utilizing **Plus Jakarta Sans** for readability and **JetBrains Mono** for technical data streams.
+**Frontend Framework**
+- React 18 with TypeScript
+- Vite 5.4 (build tool and dev server)
+
+**Styling & UI**
+- Tailwind CSS 3.4 for utility-first styling
+- Shadcn UI and Radix UI for component library
+- Framer Motion for animations and transitions
+- Lucide React for icons
+
+**Data Visualization**
+- Recharts for charts and graphs
+- Custom SVG implementations for geographic visualizations
+
+**State Management & Data Fetching**
+- TanStack React Query for server state management
+- React Router for client-side routing
+
+**Development Tools**
+- ESLint for code quality
+- Vitest for unit testing
+- PostCSS for CSS processing
+
+**Optional Dependencies**
+- jsPDF and html2canvas for PDF report generation
 
 ---
 
-## 🏆 Deloitte Hacksplosion
+## Getting Started
 
-This project was built to address the "Logistics & Supply Chain Intelligence" track. It aims to solve the fragmentation of aviation data in India by providing a single, AI-powered source of truth for the next generation of logistics leaders.
+### Prerequisites
 
-**Developed by**: [Harshit Arora](https://github.com/harshit1arora)  
-**Stakeholder Identity**: Harshit Arora — Lead Stakeholder
+- Node.js 18 or later
+- npm 9 or later (or compatible package manager: yarn, pnpm, bun)
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/harshit1arora/AeroIQ-India-Air-Cargo-Intelligence-Platform.git
+cd AeroIQ-India-Air-Cargo-Intelligence-Platform
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+### Development
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:5173`
+
+### Production Build
+
+Build for production:
+
+```bash
+npm run build
+```
+
+The optimized build will be output to the `dist/` directory.
+
+### Testing
+
+Run the test suite:
+
+```bash
+npm run test
+```
 
 ---
 
-## 📄 License
+## Design System
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+AeroIQ implements a Deloitte-inspired premium design system with the following principles:
+
+**Color Palette**
+- Primary: #86BC25 (Deloitte Green) for accents and call-to-action elements
+- Neutral: #000000, #1a1a1a, #FFFFFF for backgrounds and text
+- Accent Green Dark: #5a8a1a for interactive states
+
+**Typography**
+- Display: Georgia serif for editorial headings (light weight for premium feel)
+- Body: System sans-serif (Inter) for readable content
+- Data: JetBrains Mono for technical information and metrics
+
+**Layout Principles**
+- Sharp corners and flat design (no border-radius above 2px)
+- Minimal use of shadows; borders for separation
+- Bold typography hierarchy for clear information architecture
+- Generous padding and spacing for premium feel
+
+---
+
+## Project Context
+
+AeroIQ was developed as a submission to the Deloitte Hacksplosion 2024, addressing the "Logistics & Supply Chain Intelligence" track. The platform aggregates fragmented aviation data sources into a unified intelligence system, enabling data-driven decision-making for stakeholders across the logistics ecosystem.
+
+---
+
+## Architecture
+
+### Page Structure
+
+- **Dashboard**: Primary analytics and KPI visualization
+- **Insights**: Market trends, forecasting, and strategic intelligence
+- **Data Sources**: Monitoring and health checks for ingestion pipelines
+- **Reports**: PDF generation and report management
+- **Admin Dashboard**: System configuration and brand asset reference
+
+### Component Organization
+
+- `src/components/`: Reusable UI components and visualizations
+- `src/pages/`: Page-level containers
+- `src/hooks/`: Custom React hooks
+- `src/lib/`: Utility functions and helpers
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Author
+
+Developed by Harshit Arora  
+[GitHub](https://github.com/harshit1arora) | [Portfolio](#)
+
+---
+
+## Acknowledgments
+
+This project was built with support from the open-source community and uses several excellent libraries:
+- Recharts for data visualization
+- Shadcn UI for component primitives
+- Framer Motion for animations
+- Tailwind CSS for styling

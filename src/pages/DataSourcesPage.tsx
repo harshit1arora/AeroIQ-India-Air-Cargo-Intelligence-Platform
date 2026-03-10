@@ -84,12 +84,12 @@ const DataSourcesPage = () => {
             <p className="text-2xl font-bold text-primary">12 Active</p>
             <p className="text-xs text-muted-foreground">Monitoring 425 data endpoints simultaneously</p>
           </div>
-          <div className="glass-card p-6 border-indigo-500/20 bg-indigo-500/5">
+          <div className="glass-card p-6 border-primary/20 bg-primary/5">
             <div className="flex items-center gap-3 mb-4">
-              <ShieldCheck className="w-5 h-5 text-indigo-500" />
+              <ShieldCheck className="w-5 h-5 text-primary" />
               <h3 className="font-bold text-foreground">Data Integrity</h3>
             </div>
-            <p className="text-2xl font-bold text-indigo-500">Verified</p>
+            <p className="text-2xl font-bold text-primary">Verified</p>
             <p className="text-xs text-muted-foreground">AES-256 encrypted end-to-end tunneling</p>
           </div>
         </div>
