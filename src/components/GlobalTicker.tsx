@@ -3,19 +3,19 @@ import { Zap, TrendingUp, AlertTriangle, Activity } from "lucide-react";
 
 const tickerItems = [
   { icon: Zap, text: "DEL: Cargo throughput up 14% this hour", color: "text-blue-400" },
-  { icon: TrendingUp, text: "BOM: Export capacity optimized by 12%", color: "text-green-400" },
-  { icon: Activity, text: "AI Analysis: BLR-MAA route latency reduced", color: "text-purple-400" },
-  { icon: AlertTriangle, text: "Logistics: Cold-chain alert for HYD pharma hub", color: "text-amber-400" },
+  { icon: TrendingUp, text: "BOM: Export capacity optimized by 12%", color: "text-emerald-400" },
+  { icon: Activity, text: "AI Analysis: BLR-MAA route latency reduced", color: "text-green-500" },
+  { icon: AlertTriangle, text: "Logistics: Cold-chain alert for HYD pharma hub", color: "text-yellow-500" },
   { icon: Zap, text: "Market: 18% increase in cross-border tech trade", color: "text-cyan-400" },
-  { icon: Activity, text: "System: DGCA & AAI ingestion sync successful", color: "text-indigo-400" },
+  { icon: Activity, text: "System: DGCA & AAI ingestion sync successful", color: "text-blue-500" },
 ];
 
 const GlobalTicker = () => {
   return (
-    <div className="w-full bg-[#0F172A] backdrop-blur-md border-b border-white/10 py-2 overflow-hidden flex items-center shadow-lg">
-      <div className="flex-shrink-0 px-6 border-r border-white/10 flex items-center gap-2 z-10 bg-[#0F172A] shadow-[10px_0_15px_rgba(15,23,42,0.9)]">
-        <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse shadow-[0_0_8px_rgba(239,68,68,0.8)]" />
-        <span className="text-[10px] font-bold text-white uppercase tracking-[0.2em]">Live Intelligence</span>
+    <div className="w-full border-b py-2 overflow-hidden flex items-center" style={{ backgroundColor: '#000000', borderColor: '#2a2a2a' }}>
+      <div className="flex-shrink-0 px-6 border-r flex items-center gap-2 z-10" style={{ backgroundColor: '#000000', borderColor: '#2a2a2a' }}>
+        <div className="w-2 h-2 bg-red-500 animate-pulse" />
+        <span className="text-[10px] font-bold text-white uppercase tracking-[0.2em]" style={{ fontWeight: 700 }}>Live Intelligence</span>
       </div>
       
       <div className="relative flex flex-1 overflow-hidden">

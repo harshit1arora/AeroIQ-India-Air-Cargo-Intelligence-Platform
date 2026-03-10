@@ -60,28 +60,21 @@ const InsightsPage = () => {
               <ResponsiveContainer width="100%" height="100%">
                 <AreaChart data={data}>
                   <defs>
-                    <linearGradient id="colorImports" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="hsl(var(--primary))" stopOpacity={0.3}/>
-                      <stop offset="95%" stopColor="hsl(var(--primary))" stopOpacity={0}/>
-                    </linearGradient>
-                    <linearGradient id="colorExports" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#10B981" stopOpacity={0.3}/>
-                      <stop offset="95%" stopColor="#10B981" stopOpacity={0}/>
-                    </linearGradient>
                   </defs>
-                  <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="hsl(var(--border))" />
-                  <XAxis dataKey="name" stroke="hsl(var(--muted-foreground))" fontSize={12} tickLine={false} axisLine={false} />
-                  <YAxis stroke="hsl(var(--muted-foreground))" fontSize={12} tickLine={false} axisLine={false} />
+                  <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#2a2a2a" />
+                  <XAxis dataKey="name" stroke="#A0A0A0" fontSize={12} tickLine={false} axisLine={false} />
+                  <YAxis stroke="#A0A0A0" fontSize={12} tickLine={false} axisLine={false} />
                   <Tooltip 
                     contentStyle={{ 
-                      backgroundColor: 'rgba(255, 255, 255, 0.8)', 
-                      borderRadius: '12px', 
-                      border: '1px solid hsl(var(--border))',
-                      backdropFilter: 'blur(8px)'
+                      backgroundColor: '#1a1a1a', 
+                      borderRadius: '0px', 
+                      border: '1px solid #2a2a2a',
+                      backdropFilter: 'none',
+                      color: '#FFFFFF'
                     }} 
                   />
-                  <Area type="monotone" dataKey="imports" stackId="1" stroke="hsl(var(--primary))" fillOpacity={1} fill="url(#colorImports)" strokeWidth={3} />
-                  <Area type="monotone" dataKey="exports" stackId="1" stroke="#10B981" fillOpacity={1} fill="url(#colorExports)" strokeWidth={3} />
+                  <Area type="monotone" dataKey="imports" stackId="1" stroke="#86BC25" fillOpacity={0} fill="transparent" strokeWidth={2} />
+                  <Area type="monotone" dataKey="exports" stackId="1" stroke="#5a8a1a" fillOpacity={0} fill="transparent" strokeWidth={2} />
                 </AreaChart>
               </ResponsiveContainer>
             </div>
@@ -90,7 +83,7 @@ const InsightsPage = () => {
                 <div className="w-3 h-3 rounded bg-primary" /> Imports
               </div>
               <div className="flex items-center gap-2 text-xs text-muted-foreground font-medium">
-                <div className="w-3 h-3 rounded bg-[#10B981]" /> Exports
+                <div className="w-3 h-3 rounded bg-[#5a8a1a]" /> Exports
               </div>
             </div>
           </motion.div>

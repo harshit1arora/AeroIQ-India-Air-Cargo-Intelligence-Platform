@@ -21,8 +21,8 @@ export const AeroWingMaster = ({ className }: { className?: string }) => (
     <circle cx="17" cy="7" r="1" fill="currentColor" opacity="0.6" />
     <circle cx="7" cy="17" r="1" fill="currentColor" opacity="0.6" />
     
-    {/* Pulse Element (Simulated Purple Node) */}
-    <circle cx="18" cy="6" r="3" fill="#8B5CF6" className="animate-pulse" opacity="0.8" />
+    {/* Pulse Element (Simulated Green Node) */}
+    <circle cx="18" cy="6" r="3" fill="#86BC25" className="animate-pulse" opacity="1" />
   </svg>
 );
 

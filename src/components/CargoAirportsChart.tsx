@@ -15,10 +15,11 @@ const data = [
 ];
 
 const getBarColor = (growth: number) => {
-  if (growth >= 15) return "#2563EB";
-  if (growth >= 10) return "#3B82F6";
-  if (growth >= 7) return "#E68A00";
-  return "#F59E0B";
+  // Deloitte color palette - green shades
+  if (growth >= 15) return "#5FA51C";  // Darker green
+  if (growth >= 10) return "#86BC25";  // Primary green
+  if (growth >= 7) return "#A0CB41";   // Light green
+  return "#C8E6C9";                     // Very light green
 };
 
 const CargoAirportsChart = () => (
@@ -27,17 +28,17 @@ const CargoAirportsChart = () => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.5 }}
-    className="glass-card p-6"
+    className="glass-card p-6 border border-border rounded-none"
   >
     <h3 className="font-display text-lg text-foreground mb-1">Top 10 Cargo Airports by Growth</h3>
     <p className="text-xs text-muted-foreground mb-4">FY2024 Year-over-Year Growth Rate (%)</p>
     <ResponsiveContainer width="100%" height={320}>
       <BarChart data={data} layout="vertical" margin={{ left: 10, right: 20 }}>
-        <XAxis type="number" tick={{ fill: "#6B7280", fontSize: 11, fontFamily: "DM Mono" }} axisLine={false} tickLine={false} />
-        <YAxis dataKey="airport" type="category" tick={{ fill: "#9CA3AF", fontSize: 12, fontFamily: "DM Mono" }} axisLine={false} tickLine={false} width={40} />
+        <XAxis type="number" tick={{ fill: "#6D6E71", fontSize: 11, fontFamily: "DM Mono" }} axisLine={false} tickLine={false} />
+        <YAxis dataKey="airport" type="category" tick={{ fill: "#6D6E71", fontSize: 12, fontFamily: "DM Mono" }} axisLine={false} tickLine={false} width={40} />
         <Tooltip
-          contentStyle={{ background: "#fff", border: "1px solid #e5e7eb", borderRadius: 8, fontFamily: "DM Mono", fontSize: 12, color: "#1f2937" }}
-          labelStyle={{ color: "#9CA3AF" }}
+          contentStyle={{ background: "#F4F4F4", border: "1px solid #86BC25", borderRadius: 8, fontFamily: "DM Mono", fontSize: 12, color: "#1C1C1C" }}
+          labelStyle={{ color: "#86BC25", fontWeight: "bold" }}
           formatter={(value: number) => [`${value}%`, "Growth"]}
         />
         <Bar dataKey="growth" radius={[0, 6, 6, 0]} animationDuration={1500}>

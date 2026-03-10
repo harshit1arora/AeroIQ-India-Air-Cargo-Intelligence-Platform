@@ -41,9 +41,13 @@ const MonthlyTrendChart = () => {
           onClick={() => setShowForecast(!showForecast)}
           className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 ${
             showForecast 
-              ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20" 
+              ? "text-primary-foreground shadow-lg"
               : "bg-secondary/10 text-muted-foreground hover:bg-secondary/20"
           }`}
+          style={showForecast ? {
+            backgroundColor: 'hsl(var(--deloitte-primary-green))',
+            boxShadow: '0 4px 12px rgba(134, 188, 37, 0.2)'
+          } : {}}
         >
           <Sparkles className={`w-3 h-3 ${showForecast ? "animate-pulse" : ""}`} />
           {showForecast ? "Forecast Active" : "AI Forecast"}
@@ -53,31 +57,23 @@ const MonthlyTrendChart = () => {
       <ResponsiveContainer width="100%" height={280}>
         <AreaChart data={showForecast ? data : data.slice(0, 12)}>
           <defs>
-            <linearGradient id="gradCyan" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#2563EB" stopOpacity={0.2} />
-              <stop offset="100%" stopColor="#2563EB" stopOpacity={0} />
-            </linearGradient>
-            <linearGradient id="gradAmber" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#E68A00" stopOpacity={0.2} />
-              <stop offset="100%" stopColor="#E68A00" stopOpacity={0} />
-            </linearGradient>
           </defs>
-          <XAxis dataKey="month" tick={{ fill: "#6B7280", fontSize: 10, fontFamily: "DM Mono" }} axisLine={false} tickLine={false} />
-          <YAxis tick={{ fill: "#6B7280", fontSize: 10, fontFamily: "DM Mono" }} axisLine={false} tickLine={false} />
+          <XAxis dataKey="month" tick={{ fill: "#A0A0A0", fontSize: 10, fontFamily: "DM Mono", fontWeight: 400 }} axisLine={false} tickLine={false} />
+          <YAxis tick={{ fill: "#A0A0A0", fontSize: 10, fontFamily: "DM Mono", fontWeight: 400 }} axisLine={false} tickLine={false} />
           <Tooltip 
-            contentStyle={{ background: "rgba(15, 23, 42, 0.9)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, fontFamily: "DM Mono", fontSize: 12, color: "#fff" }}
-            itemStyle={{ color: "#fff" }}
+            contentStyle={{ background: "#1a1a1a", border: "1px solid #2a2a2a", borderRadius: 0, fontFamily: "DM Mono", fontSize: 12, color: "#FFFFFF" }}
+            itemStyle={{ color: "#FFFFFF" }}
           />
-          <Area type="monotone" dataKey="domestic" stroke="#2563EB" fill="url(#gradCyan)" strokeWidth={2} animationDuration={1000} />
-          <Area type="monotone" dataKey="international" stroke="#E68A00" fill="url(#gradAmber)" strokeWidth={2} animationDuration={1000} />
+          <Area type="monotone" dataKey="domestic" stroke="#86BC25" fill="transparent" strokeWidth={2} animationDuration={1000} />
+          <Area type="monotone" dataKey="international" stroke="#5a8a1a" fill="transparent" strokeWidth={2} animationDuration={1000} />
           {showForecast && (
             <Line 
               type="monotone" 
               dataKey="forecast" 
-              stroke="#10B981" 
+              stroke="#6BA820"
               strokeDasharray="5 5" 
               strokeWidth={2} 
-              dot={{ r: 4, fill: "#10B981" }}
+              dot={{ r: 4, fill: "#6BA820" }}
               animationDuration={1500}
             />
           )}
@@ -86,18 +82,19 @@ const MonthlyTrendChart = () => {
       
       <div className="flex flex-wrap gap-4 mt-3">
         <div className="flex items-center gap-2 text-xs text-muted-foreground">
-          <div className="w-3 h-3 rounded-full" style={{ background: "#2563EB" }} /> Domestic
+          <div className="w-3 h-3 rounded-full" style={{ background: "#86BC25" }} /> Domestic
         </div>
         <div className="flex items-center gap-2 text-xs text-muted-foreground">
-          <div className="w-3 h-3 rounded-full" style={{ background: "#E68A00" }} /> International
+          <div className="w-3 h-3 rounded-full" style={{ background: "#6D6E71" }} /> International
         </div>
         {showForecast && (
           <motion.div 
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
-            className="flex items-center gap-2 text-xs text-green-400 font-medium"
+            className="flex items-center gap-2 text-xs font-medium"
+            style={{ color: '#6BA820' }}
           >
-            <div className="w-3 h-3 rounded-full border-2 border-dashed border-green-400" /> AI Forecast (Predicted)
+            <div className="w-3 h-3 rounded-full border-2 border-dashed" style={{ borderColor: '#6BA820' }} /> AI Forecast (Predicted)
           </motion.div>
         )}
       </div>

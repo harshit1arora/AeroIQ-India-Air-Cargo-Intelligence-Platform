@@ -70,19 +70,36 @@ const AdminDashboard = () => {
                   <h3 className="text-[10px] uppercase tracking-[0.2em] font-bold text-primary mb-6">Color Palette</h3>
                   <div className="grid grid-cols-3 gap-4">
                     <div className="space-y-2">
-                      <div className="aspect-square rounded-xl bg-[#3B82F6] shadow-lg shadow-blue-500/20" />
-                      <p className="text-[9px] font-bold text-foreground">AERO_BLUE</p>
-                      <p className="text-[8px] font-mono-data text-muted-foreground">HEX: #3B82F6</p>
+                      <div className="aspect-square border border-border" style={{ backgroundColor: '#86BC25' }} />
+                      <p className="text-[9px] font-bold text-foreground">PRIMARY_GREEN</p>
+                      <p className="text-[8px] font-mono-data text-muted-foreground">HEX: #86BC25</p>
                     </div>
                     <div className="space-y-2">
-                      <div className="aspect-square rounded-xl bg-[#8B5CF6] shadow-lg shadow-purple-500/20" />
-                      <p className="text-[9px] font-bold text-foreground">PULSE_PURPLE</p>
-                      <p className="text-[8px] font-mono-data text-muted-foreground">HEX: #8B5CF6</p>
+                      <div className="aspect-square border border-border" style={{ backgroundColor: '#000000' }} />
+                      <p className="text-[9px] font-bold text-foreground">PRIMARY_BLACK</p>
+                      <p className="text-[8px] font-mono-data text-muted-foreground">HEX: #000000</p>
                     </div>
                     <div className="space-y-2">
-                      <div className="aspect-square rounded-xl bg-[#0F172A] shadow-lg" />
-                      <p className="text-[9px] font-bold text-foreground">DEEP_SLATE</p>
-                      <p className="text-[8px] font-mono-data text-muted-foreground">HEX: #0F172A</p>
+                      <div className="aspect-square border border-border" style={{ backgroundColor: '#A0A0A0' }} />
+                      <p className="text-[9px] font-bold text-foreground">SECONDARY_TEXT</p>
+                      <p className="text-[8px] font-mono-data text-muted-foreground">HEX: #A0A0A0</p>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-3 gap-4 mt-4">
+                    <div className="space-y-2">
+                      <div className="aspect-square border border-border" style={{ backgroundColor: '#5a8a1a' }} />
+                      <p className="text-[9px] font-bold text-foreground">ACCENT_DARK</p>
+                      <p className="text-[8px] font-mono-data text-muted-foreground">HEX: #5a8a1a</p>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="aspect-square border border-border" style={{ backgroundColor: '#1a1a1a' }} />
+                      <p className="text-[9px] font-bold text-foreground">BG_SECONDARY</p>
+                      <p className="text-[8px] font-mono-data text-muted-foreground">HEX: #1a1a1a</p>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="aspect-square border border-border" style={{ backgroundColor: '#2a2a2a' }} />
+                      <p className="text-[9px] font-bold text-foreground">BORDER_COLOR</p>
+                      <p className="text-[8px] font-mono-data text-muted-foreground">HEX: #2a2a2a</p>
                     </div>
                   </div>
                 </div>

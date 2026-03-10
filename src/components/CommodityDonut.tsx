@@ -10,7 +10,7 @@ const data = [
   { name: "Others", value: 7 },
 ];
 
-const COLORS = ["#2563EB", "#3B82F6", "#E68A00", "#F59E0B", "#7C3AED", "#6B7280"];
+const COLORS = ["#86BC25", "#5a8a1a", "#86BC25", "#5a8a1a", "#A0A0A0", "#2a2a2a"];
 
 const CommodityDonut = () => (
   <motion.div
@@ -38,7 +38,7 @@ const CommodityDonut = () => (
             <Cell key={index} fill={COLORS[index]} />
           ))}
         </Pie>
-        <Tooltip contentStyle={{ background: "#fff", border: "1px solid #e5e7eb", borderRadius: 8, fontFamily: "DM Mono", fontSize: 12, color: "#1f2937" }} formatter={(v: number) => [`${v}%`, "Share"]} />
+        <Tooltip contentStyle={{ background: "#1a1a1a", border: "1px solid #2a2a2a", borderRadius: 0, fontFamily: "DM Mono", fontSize: 12, color: "#FFFFFF" }} formatter={(v: number) => [`${v}%`, "Share"]} />
       </PieChart>
     </ResponsiveContainer>
     <div className="grid grid-cols-2 gap-2 mt-2">
